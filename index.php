@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        // put your code here
+      echo "1:LALALALALALA  2:1 what the hell are you doing, 1:dramatic gasp"
         ?>
     </body>
 </html>
