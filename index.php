@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-      echo "1:LALALALALALA  2:1 what the hell are you doing, 1:dramatic gasp"
+      require_once (__DIR__ . "/controller/create-db.php");
         ?>
     </body>
 </html>
