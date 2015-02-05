@@ -6,12 +6,19 @@ $connection = new mysqli($host, $username, $password);
 if ($connection->connect_error) {
     die("ERROR: " . $connection->connect_error);
 } else {
-    echo "success: " . $connection->host_info;
+   
 }
 
 $exists = $connection->select_db($database);
- if($exists){
-     echo "Database exists";
+ if(!$exists){
+    $query = $connection->query("CREATE DATABASE $database");
+    if($query){
+        echo "database succesful noobs " . $database;
+    }  
  }
+ else {
+     echo "data base already exists" ;  
+    }
 
+     $query = $connection->query();
 $connection->close();
