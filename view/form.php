@@ -3,7 +3,7 @@ require_once (__DIR__ . "/../model/config.php");
 ?>
 <h1>Create Blog Post</h1>
 
-<form method="post" action="<?php $path . "controller/create-post.php"; ?>">
+<form method="post" action='<?php echo $path . "controller/create-post.php"?>'>
     <div>
         <label for="title">Title: </label>
         <input type="text" name="title" />    
@@ -12,7 +12,6 @@ require_once (__DIR__ . "/../model/config.php");
     <div>
         <label for="post">Post:</label>
         <textarea name="post"></textarea>
-
     </div>
 
     <div>
