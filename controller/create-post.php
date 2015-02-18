@@ -15,6 +15,6 @@ $query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title',
 if ($query) {
     echo "<p>succesfully inserted post: $title</p>";
 } else {
-    echo "<p>" . $_SESSION->error . "</p>";
+    echo "<p>" . $_SESSION["connection"]->error . "</p>";
 }
 

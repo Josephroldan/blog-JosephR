@@ -7,9 +7,9 @@ class Database {
     private $username;
     private $password;
     private $database;
-    public  $error;
+    public $error;
 
-    public function _construct($host, $username, $password, $database) {
+    public function __construct($host, $username, $password, $database) {
         $this->host = $host;
         $this->username = $username;
         $this->password = $password;
@@ -28,9 +28,10 @@ class Database {
 
 
         if (!$exists) {
+            echo 'database doesnt exist';
             $query = $this->connection->query("CREATE DATABASE $database");
             if ($query) {
-                echo "<p>database succesful noobs " . $database . "</p>";
+                echo "<p>database creation succesful noobs " . $database . "</p>";
             }
         } else {
             echo "<p>data base already exists</p>";
@@ -53,11 +54,11 @@ class Database {
     public function query($string) {
         $this->openConnection();
         $query = $this->connection->query($string);
-        
-        if(!$query){
-          $this->error = $this->connection->error;
+
+        if (!$query) {
+            $this->error = $this->connection->error;
         }
-        
+
         $this->closeConnection();
         return $query;
     }
