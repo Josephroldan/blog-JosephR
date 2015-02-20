@@ -13,3 +13,7 @@ if ($query) {
 } else {
     echo "<p>" . $_SESSION["connection"]->error . "</p>";
 }
+
+$query = $_SESSION["connection"]->query("CREATE TABLE users ("
+        . "id int(11) NOT NULL AUTO_INCREMENT ,"
+        . "title varchar(255) NOT NULL,");
