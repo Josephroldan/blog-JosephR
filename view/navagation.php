@@ -1,5 +1,11 @@
 <?php
 require_once (__DIR__ . "/../model/config.php");
+
+
+if(!authenticateUser()){
+    header("Location: " . $path . "index.php");           
+    die();
+}
 ?>
 <nav>
     <ul>

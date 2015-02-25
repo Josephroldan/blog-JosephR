@@ -6,12 +6,14 @@ $query = $_SESSION["connection"]->query("CREATE TABLE posts ("
         . "title varchar(255) NOT NULL,"
         . "post text NOT NULL,"
         . "PRIMARY KEY (id))");
+//createes table for posts on the website
 
 
 if ($query) {
     echo "succesfully created table:posts";
 } else {
     echo "<p>" . $_SESSION["connection"]->error . "</p>";
+    //
 }
 
 $query = $_SESSION["connection"]->query("CREATE TABLE users ("
@@ -21,7 +23,7 @@ $query = $_SESSION["connection"]->query("CREATE TABLE users ("
         . "password char(128) NOT NULL,"
         . "salt char(128) NOT NULL,"
         . "PRIMARY KEY (id))");
-
+//backbone for user database
 if($query){
     echo "succesfully created table:users";
 } else {
