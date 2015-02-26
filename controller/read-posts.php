@@ -1,7 +1,7 @@
 <?php
 
 require_once (__DIR__ . "/../model/config.php");
-
+//pulls config data
 $query = "SELECT * FROM posts";
 $result = $_SESSION["connection"]->query($query);
 
@@ -15,3 +15,4 @@ if ($result) {
         echo "</div";
     }
 }
+//shows all posts ever made

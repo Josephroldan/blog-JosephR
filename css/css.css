@@ -1,0 +1,22 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 25, 2015, 1:01:04 PM
+    Author     : Student
+*/
+body {
+    background-image: url(http://www.hdwallpapersos.com/wp-content/uploads/2014/09/cool-wallpapers-large-hd-wallpaper-database-zlnstyzt.jpg);
+    
+}
+/*put in my sweet background picture*/
+h1{
+    color: white;
+}
+/*changes headers color to ease eye strain */
+nav {
+    opacity: 0.5;
+}
+/*changes navbar opacity*/

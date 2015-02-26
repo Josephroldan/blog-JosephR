@@ -6,7 +6,7 @@ $query = $_SESSION["connection"]->query("CREATE TABLE posts ("
         . "title varchar(255) NOT NULL,"
         . "post text NOT NULL,"
         . "PRIMARY KEY (id))");
-//createes table for posts on the website
+//creates table for posts on the website
 
 
 if ($query) {

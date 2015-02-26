@@ -1,16 +1,14 @@
 <?php
+
 require_once (__DIR__ . "/../model/config.php");
+//holds data from config.php
 
-
-if(!authenticateUser()){
-    header("Location: " . $path . "index.php");           
+if (!authenticateUser()) {
+    header("Location: " . $path . "index.php");
     die();
+    //protects code from hackers by killing code or sending them back 
 }
 ?>
-<nav>
-    <ul>
-        <li><a href="<?php echo $path . "post.php" ?>">Blog Post Form </a></li>
-    </ul>
-</nav>
+
 
 

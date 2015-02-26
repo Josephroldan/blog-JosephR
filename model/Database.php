@@ -8,7 +8,7 @@ class Database {
     private $password;
     private $database;
     public $error;
-
+//can be accessed outside if public and can't if privaate  
     public function __construct($host, $username, $password, $database) {
         $this->host = $host;
         $this->username = $username;
@@ -23,13 +23,13 @@ class Database {
         } else {
             
         }
-
         $exists = $this->connection->select_db($database);
 
 
         if (!$exists) {
             echo 'database doesnt exist';
             $query = $this->connection->query("CREATE DATABASE $database");
+            //code tells if the database does not exist 
             if ($query) {
                 echo "<p>database creation succesful noobs " . $database . "</p>";
             }
